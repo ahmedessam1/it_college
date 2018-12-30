@@ -11,18 +11,19 @@
 
 <!--SOLUTION HERE-->
 <form>
-    <input type="text" id="radius_input">
-    <button type="button" onclick="sphereVolume()">Calculate the radius</button>
+    <input type="text" id="radius">
+    <button type="button" onclick="sphereVolume()">
+        Calculate the sphere volume
+    </button>
 </form>
 
 <script>
-    function sphereVolume () {
-        var radius = document.getElementById('radius_input').value;
+    function sphereVolume() {
+        var radius = document.getElementById('radius').value;
         var volume = (4.0 / 3.0) * Math.PI * Math.pow(radius, 3);
-        alert(volume);
+        return volume;
     }
 </script>
 <!--END OF SOLUTION-->
-
 </body>
 </html>
