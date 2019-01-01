@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+</head>
+<body>
+
+<!--SOLUTION STARTING-->
+<div id="demo">
+    <input type="text" id="user_text">
+</div>
+
+<div>
+    <button type="button" onclick="readFromFile()">Change Content</button>
+</div>
+
+
+<script>
+    function readFromFile() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("user_text").value =
+                    this.responseText;
+            }
+        };
+        xhttp.open("GET", "replace.txt", true);
+        xhttp.send();
+    }
+</script>
+<!--SOLUTION ENDING-->
+</body>
+</html>
